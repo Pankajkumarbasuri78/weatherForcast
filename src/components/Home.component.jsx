@@ -10,7 +10,7 @@ const Home= () => {
   
     useEffect(()=>{
       const requestWeatherData= async()=>{
-        const getWeatherData=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${weather}&units=metric&appid=${API_KEY}`);
+        const getWeatherData=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${data}&units=metric&appid=${API_KEY}`);
         setCity(getWeatherData.data.main);
       };
       requestWeatherData();
